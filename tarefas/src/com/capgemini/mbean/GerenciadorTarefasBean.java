@@ -8,6 +8,7 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
+import javax.faces.model.SelectItem;
 
 import com.capgemini.model.Tarefa;
 
@@ -79,6 +80,17 @@ public class GerenciadorTarefasBean {
 
 	public void setTarefas(List<Tarefa> tarefas) {
 		this.tarefas = tarefas;
+	}
+	
+	public List<SelectItem> getPrioridades(){
+		
+		List<SelectItem> prioridades = new ArrayList<>();
+		
+        prioridades.add(new SelectItem("Baixa", "Baixa"));
+        prioridades.add(new SelectItem("Média", "Média"));
+        prioridades.add(new SelectItem("Alta", "Alta"));
+        
+        return prioridades;
 	}
 
 }

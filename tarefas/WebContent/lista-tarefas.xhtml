@@ -35,9 +35,7 @@
 						<p:selectOneMenu id="prioridade"
 							value="#{gerenciadorTarefasBean.tarefa.prioridade}"
 							style="width:125px">
-							<f:selectItem itemLabel="Baixa" itemValue="Baixa" />
-							<f:selectItem itemLabel="Média" itemValue="Média" />
-							<f:selectItem itemLabel="Alta" itemValue="Alta" />
+							<f:selectItems value="#{gerenciadorTarefasBean.prioridades}" />
 							<f:facet name="footer">
 								<p:separator />
 								<h:outputText value="3 prioridades" style="font-weight:bold;" />
